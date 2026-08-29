@@ -1,6 +1,21 @@
 import axios from "axios"
 
-const API_BASE_URL = "http://127.0.0.1:8000"
+// ============================================================
+// API BASE URL
+// ============================================================
+//
+// Local development:
+// VITE_API_BASE_URL=http://127.0.0.1:8000
+//
+// Production:
+// VITE_API_BASE_URL=https://docintel-backend-930f.onrender.com
+//
+// The frontend never communicates directly with Gemini.
+// All requests go through FastAPI.
+// ============================================================
+
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000"
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -22,7 +37,6 @@ export const checkHealth = async () => {
  */
 export const uploadDocument = async (file, onUploadProgress) => {
   const formData = new FormData()
-
   formData.append("file", file)
 
   const response = await api.post(
