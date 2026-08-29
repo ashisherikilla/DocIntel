@@ -8,14 +8,14 @@ import axios from "axios"
 // VITE_API_BASE_URL=http://127.0.0.1:8000
 //
 // Production:
-// VITE_API_BASE_URL=https://docintel-backend-930f.onrender.com
+// VITE_API_BASE_URL=https://docintel-backend-930t.onrender.com
 //
 // The frontend never communicates directly with Gemini.
 // All requests go through FastAPI.
 // ============================================================
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000"
+  import.meta.env.VITE_API_BASE_URL || "https://docintel-backend-930t.onrender.com"
 
 const api = axios.create({
   baseURL: API_BASE_URL,
