@@ -21,6 +21,18 @@ This makes the system more transparent and reduces the risk of unsupported or ha
 
 ---
 
+
+## 🌐 Try DocIntel
+
+**Live Demo:** https://docintel-rag-based.vercel.app/
+
+**Source Code:** https://github.com/ashisherikilla/DocIntel
+
+> Upload a PDF → Ask questions → Retrieve relevant context → Get grounded answers with transparent source and page-level citations.
+
+
+ ---
+
 ## Problem Statement
 
 Large PDF documents often contain valuable information that is difficult to locate manually.
