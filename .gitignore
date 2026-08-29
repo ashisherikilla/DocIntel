@@ -1,0 +1,37 @@
+# Environment
+
+.env
+.env.*
+!.env.example
+
+# Virtual environment
+
+venv/
+
+# Python
+
+**pycache**/
+*.py[cod]
+
+# ChromaDB
+
+backend/data/chroma/
+
+# Node
+
+node_modules/
+frontend/dist/
+
+# IDE
+
+.vscode/
+.idea/
+
+# OS
+
+.DS_Store
+Thumbs.db
+
+# Logs
+
+*.log
