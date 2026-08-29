@@ -20,15 +20,24 @@ app = FastAPI(
 # CORS
 # ============================================================
 
-# React will eventually run on a different local origin
-# during development, so allow the frontend to communicate
-# with the FastAPI backend.
+# Allowed frontend origins.
+#
+# Local development:
+#   http://localhost:5173
+#   http://127.0.0.1:5173
+#
+# Production:
+#   https://docintel-frontend-mocha.vercel.app
+#
+# The frontend communicates only with FastAPI.
+# Gemini credentials remain server-side.
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://docintel-frontend-mocha.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
